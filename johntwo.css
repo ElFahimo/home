@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+.header { 
+    height: 123px;
+    text-align: header;
+    background-color: rgb(144, 72, 192);
+}
+.absolute { 
+    position: absolute;
+}
+div.right {
+    text-align: right;
+}
