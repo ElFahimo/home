@@ -1,0 +1,108 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+  <script src="hello.js"></script>
+  <link rel="stylesheet" href="john.css">
+  <meta name="viewport" content="width=1920, length=1080">
+</head>
+<title>Fahim's website</title>
+<div class="footer">
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,1839,3408,3890,5426,2,3794,1321,3897,18876,1697,12220" currency="GBP" theme="light" transparent="false" show-symbol-logo="true"></div>
+</div>
+<div class="u">
+<br>
+</div>
+<img src="ramone.png" class="hello" id="main" style="position: absolute;top: 50px;left: 640px;">
+<br>
+<div class="oper">
+<a href="query.html" style="right: 800px;position: absolute;bottom: 300px;">Check Live Crypto Prices</a>
+</div>
+<div>
+<img src="realeye.png" class="eye" id="rick-right-eye" name="helo" style="top: 215px; right: 810px;">
+<img src="realeye.png" class="eye" id="rick-left-eye" style="top: 216px; right: 875px;">
+<img src="realeye.png" class="eye" id="morty-right-eye" style="top: 360px; right: 970px;">
+<img src="realeye.png" class="eye" id="morty-left-eye" style="top: 370px; right: 1040px;"> 
+</div>
+<script>
+  document.addEventListener('mousemove',(e)=> {
+    // For Rick's eyes
+    let MouseX = e.clientX;
+    let MouseY = e.clientY;
+    let Adjacent = 0;
+    let Opposite = 0;
+    if (MouseY > 233) {
+	   Opposite = MouseY - 233;
+    } else {
+	    Opposite = 233 - MouseY;
+    }
+    if (MouseX > 1057) {
+	    Adjacent = MouseX - 1057;
+    } else {
+	    Adjacent = 1057 - MouseX;
+    } 
+    var one = Opposite / Adjacent;
+    var jon = Math.atan(one);
+    var angleone = jon*57;
+    console.log("Opposite length = " + Opposite + " And Adjacent length = " + Adjacent + " | x = " + MouseX + " y = " + MouseY + " | calculation:" + one + "                                                          Tan = " + jon + " | Added Angle = " + angleone);
+    if (MouseX > 1057 && MouseY < 233) {
+      document.getElementById("rick-right-eye").style.transform = `rotate(-${90 + angleone}deg)`;
+      document.getElementById("rick-left-eye").style.transform = `rotate(-${90 + angleone}deg)`;
+    } 
+    if (MouseX > 1057 && MouseY > 233 ) { 
+      document.getElementById("rick-right-eye").style.transform = `rotate(${-90 + angleone}deg)`;
+      document.getElementById("rick-left-eye").style.transform = `rotate(${-90 + angleone}deg)`;
+    }
+    if (MouseX < 1057 && MouseY > 233) {
+      document.getElementById("rick-right-eye").style.transform = `rotate(${90 - angleone}deg)`;
+      document.getElementById("rick-left-eye").style.transform = `rotate(${90 - angleone}deg)`;
+    }
+    if (MouseX < 1057 && MouseY < 233) {
+      document.getElementById("rick-right-eye").style.transform = `rotate(${90 + angleone}deg)`;
+      document.getElementById("rick-left-eye").style.transform = `rotate(${90 + angleone}deg)`;
+    }
+  // For Morty's eyes
+    let OneAdjacent = 0;
+    let OneOpposite = 0;
+    if (MouseY > 384) {
+	    OneOpposite = MouseY - 384;
+    } else {
+	    OneOpposite = 384 - MouseY;
+    }
+    if (MouseX > 895) {
+	    OneAdjacent = MouseX - 895;
+    } else {
+	    OneAdjacent = 895 - MouseX;
+    }
+    var sone = OneOpposite / OneAdjacent;
+    var tjon = Math.atan(sone);
+    var angletwo = tjon*57;
+    console.log("Opposite length = " + OneOpposite + " And Adjacent length = " + OneAdjacent + " | x = " + MouseX + " y = " + MouseY + " | calculation:" + sone + "                                                          Tan = " + tjon + " | Added Angle = " + angletwo);
+    if (MouseX > 895 && MouseY < 384) {
+     document.getElementById("morty-right-eye").style.transform = `rotate(-${90 + angletwo}deg)`;
+      document.getElementById("morty-left-eye").style.transform = `rotate(-${90 + angletwo}deg)`;
+    } 
+    if (MouseX > 895 && MouseY > 384 ) { 
+      document.getElementById("morty-right-eye").style.transform = `rotate(${-90 + angletwo}deg)`;
+      document.getElementById("morty-left-eye").style.transform = `rotate(${-90 + angletwo}deg)`;
+    }
+    if (MouseX < 895 && MouseY > 384) {
+      document.getElementById("morty-right-eye").style.transform = `rotate(${90 - angletwo}deg)`;
+     document.getElementById("morty-left-eye").style.transform = `rotate(${90 - angletwo}deg)`;
+    }
+    if (MouseX < 895 && MouseY < 384) {
+      document.getElementById("morty-right-eye").style.transform = `rotate(${90 + angletwo}deg)`;
+     document.getElementById("morty-left-eye").style.transform = `rotate(${90 + angletwo}deg)`;
+   }
+   document.getElementById("date").innerHTML = Date();
+  })
+</script>
+<div style="position: absolute; right: 768px; bottom: 3px;" id="date"></div>
+<script>
+</script>
+<footer style="bottom: 50px;">
+  <right style="right: -1893px;">
+    <p> A website by <i>Fahim</i></p>
+  </right>
+</footer>
+</body>   
+</html>
