@@ -1,0 +1,57 @@
+.hello {
+  width: 650px;
+  height: 500px;
+  text-align: footer;
+}
+body {
+  background-color:rgb(155, 40, 231);
+  }
+yeye {
+  background-color: azure;
+}
+.query {
+  width: 700px;
+  height: 100px;
+}
+.upper {
+  text-align:right;
+}
+div.u {
+  text-align:right;
+  }
+.oper {
+  text-align:footer;
+}
+a {
+  border-radius: 10px ;
+  padding: 10px 90px 10px 90px;
+  background-color: white;
+  color: black;
+}
+a:hover {
+  background-color: black;
+  color: white
+}
+.closer {
+  width:150px;
+  height:100px;
+}
+.eye {
+  width:30px;
+  height:30px;
+  position: absolute;
+}
+.footer {
+  text-align:footer;
+}
+footer {
+  text-align:footer;
+  position: absolute;
+}
+right {
+  text-align: right;
+  position: absolute;
+}
+div.heyman {
+  position: absolute;
+}
