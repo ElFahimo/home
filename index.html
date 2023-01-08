@@ -118,6 +118,11 @@
 		background-size: 100%;
 		
 	}
-</style>	
+</style>
+<script>
+	var loader = document.getElementById("yesman");
+	document.addEventlistener('load',(e) => {
+		loader.style.display = none;
+	}
 </body>   
 </html>
