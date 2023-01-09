@@ -8,7 +8,7 @@
 <title>Fahim's website</title>
 <body>
 <div class="footer">
-<p id="para" ><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,1839,3408,3890,5426,2,3794,1321,3897,18876,1697,12220" currency="GBP" theme="light" transparent="false" show-symbol-logo="true"></div></p>
+<div id="para" ><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,1839,3408,3890,5426,2,3794,1321,3897,18876,1697,12220" currency="GBP" theme="light" transparent="false" show-symbol-logo="true"></div></div>
 </div>
 <div class="u">
 <br>
@@ -120,10 +120,11 @@
 	}
 </style>
 <script>
+	document.getElementById("para").style.visibility = "hidden";
 	window.addEventListener('load',(event) => {
 		document.getElementById("yesman").style.display = "none";
   		document.body.style.backgroundColor = "rgb(155, 40, 231)";
-		document.getElementById("para").style.visibility = "hidden";
+		document.getElementById("para").style.visibility = "visible";
 	});
 </script>
 </body>   
