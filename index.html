@@ -8,7 +8,7 @@
 <title>Fahim's website</title>
 <body id="body">
 <div class="footer">
-<p id="para"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,1839,3408,3890,5426,2,3794,1321,3897,18876,1697,12220" currency="GBP" theme="light" transparent="false" show-symbol-logo="true"></div></p>
+<p id="para" ><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,1839,3408,3890,5426,2,3794,1321,3897,18876,1697,12220" currency="GBP" theme="light" transparent="false" show-symbol-logo="true"></div></p>
 </div>
 <div class="u">
 <br>
@@ -108,7 +108,6 @@
 </footer>
 <style>
 	.nolo {
-		background-color: black;
 		background: #000 url(homer-simpson-the-simpsons.gif) no-repeat center center;
 		z-index:100;
 		height: 935px;;
@@ -122,8 +121,11 @@
 </style>
 <script>
 	window.addEventListener('load',(event) => {
-		document.getElementById("yesman").style.display = "none";
+		window.getElementById("yesman").style.display = "none";
+		window.getElementById("body").style.backgroundColor = rgb(84,36,27);
+		window.getElementById("para").innerHTML = <h3>Your page is LOADING</h3>;
 	});
 </script>
 </body>   
 </html>
+
