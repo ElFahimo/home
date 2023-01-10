@@ -132,11 +132,16 @@
 <script>
 	document.getElementById("para").style.visibility = "hidden";
 	window.addEventListener('load',(event) => {
+		setTimeout(john,5000);
+	});
+</script>
+<script>
+	function john() {
 		document.getElementById("yesman").style.display = "none";
   		document.body.style.backgroundColor = "rgb(155, 40, 231)";
 		document.getElementById("para").style.visibility = "visible";
 		document.getElementById("man").style.visibility = "hidden";
-	});
+	}
 </script>
 </body>   
 </html>
