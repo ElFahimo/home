@@ -1,96 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chess Board</title>
+	<title>8x8 Square Grid</title>
 	<style>
-		/* Styles for the chess board */
-		#board {
-			display: flex;
-			flex-wrap: wrap;
-			width: 320px;
-			height: 320px;
+		table {
+			border-collapse: collapse;
 		}
-		.square {
-			width: 40px;
-			height: 40px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 24px;
-			font-weight: bold;
+		td {
+			width: 30px;
+			height: 30px;
+			border: 1px solid black;
 		}
-		.white {
-			background-color: #f2d9b6;
-		}
-		.black {
-			background-color: #b58863;
-			color: white;
+		th {
+			
+			width: 30px;
+			height: 30px;
+			border: 1px solid white;
 		}
 	</style>
 </head>
 <body>
-	<div id="board">
-		<div class="square black">♜</div>
-		<div class="square white">♞</div>
-		<div class="square black">♝</div>
-		<div class="square white">♛</div>
-		<div class="square black">♚</div>
-		<div class="square white">♝</div>
-		<div class="square black">♞</div>
-		<div class="square white">♜</div>
-		<div class="square white">♟︎</div>
-		<div class="square black">♟︎</div>
-		<div class="square white">♟︎</div>
-		<div class="square black">♟︎</div>
-		<div class="square white">♟︎</div>
-		<div class="square black">♟︎</div>
-		<div class="square white">♟︎</div>
-		<div class="square black">♟︎</div>
-	</div>
-
-	<script>
-    $(function() {
-
-  var selectedPiece = null;
-
-  // Add click event handler to squares
-  $('.square').click(function() {
-
-    var clickedSquare = $(this);
-    var piece = clickedSquare.html();
-
-    // If no piece is selected, select the clicked piece
-    if (selectedPiece == null) {
-      if (piece != "") {
-        selectedPiece = clickedSquare;
-        selectedPiece.addClass("selected");
-      }
-    }
-
-    // If a piece is already selected, try to move it to the clicked square
-    else {
-      // Remove the selected class from the previously selected piece
-      selectedPiece.removeClass("selected");
-
-      // Check if the move is valid
-      if (isValidMove(selectedPiece, clickedSquare)) {
-        // Move the piece to the new square
-        clickedSquare.html(selectedPiece.html());
-        selectedPiece.html("");
-      }
-
-      // Deselect the piece
-      selectedPiece = null;
-    }
-  });
-
-  // Check if a move is valid
-  function isValidMove(fromSquare, toSquare) {
-    // TODO: Implement this function to check for valid moves
-    return true;
-  }
-
-});
-  </script>
+	<table>
+		<!-- create 8 rows -->
+		<tr>
+			<!-- create 8 cells (td) in each row -->
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+			<th></th>
+			<td></td>
+		</tr>
+	</table>
 </body>
 </html>
