@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chess Board</title>
+	<style>
+		/* Styles for the chess board */
+		#board {
+			display: flex;
+			flex-wrap: wrap;
+			width: 320px;
+			height: 320px;
+		}
+		.square {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.white {
+			background-color: #f2d9b6;
+		}
+		.black {
+			background-color: #b58863;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="board">
+		<div class="square black">♜</div>
+		<div class="square white">♞</div>
+		<div class="square black">♝</div>
+		<div class="square white">♛</div>
+		<div class="square black">♚</div>
+		<div class="square white">♝</div>
+		<div class="square black">♞</div>
+		<div class="square white">♜</div>
+		<div class="square white">♟︎</div>
+		<div class="square black">♟︎</div>
+		<div class="square white">♟︎</div>
+		<div class="square black">♟︎</div>
+		<div class="square white">♟︎</div>
+		<div class="square black">♟︎</div>
+		<div class="square white">♟︎</div>
+		<div class="square black">♟︎</div>
+	</div>
+
+	<script>
+    $(function() {
+
+  var selectedPiece = null;
+
+  // Add click event handler to squares
+  $('.square').click(function() {
+
+    var clickedSquare = $(this);
+    var piece = clickedSquare.html();
+
+    // If no piece is selected, select the clicked piece
+    if (selectedPiece == null) {
+      if (piece != "") {
+        selectedPiece = clickedSquare;
+        selectedPiece.addClass("selected");
+      }
+    }
+
+    // If a piece is already selected, try to move it to the clicked square
+    else {
+      // Remove the selected class from the previously selected piece
+      selectedPiece.removeClass("selected");
+
+      // Check if the move is valid
+      if (isValidMove(selectedPiece, clickedSquare)) {
+        // Move the piece to the new square
+        clickedSquare.html(selectedPiece.html());
+        selectedPiece.html("");
+      }
+
+      // Deselect the piece
+      selectedPiece = null;
+    }
+  });
+
+  // Check if a move is valid
+  function isValidMove(fromSquare, toSquare) {
+    // TODO: Implement this function to check for valid moves
+    return true;
+  }
+
+});
+  </script>
+</body>
+</html>
