@@ -5,6 +5,7 @@
 }
 body {
   background-color:rgb(84,36,27);
+  overflow: hidden;
   }
 yeye {
   background-color: azure;
