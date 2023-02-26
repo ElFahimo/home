@@ -4,7 +4,18 @@
   <body>
     <script>
       const apikey = ${{ secrets.API_KEY }};
-      document.getElementById("one").innerHTML = apikey;
+      request('GET','https://pro-api.coinmarketcap.com/cryptocurrency/latest?CMC_PRO_API_KEY='+ apikey).then((r1) => {
+        console.log(r1);
+      }).catch()
+      
+      function request(method,url) {
+        return new Promise(function (resolve, reject) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(method,url);
+          xhr.onerror = reject;
+          xhr.send();
+        })
+      }
     </script>
     <p id="one"></p>
   </body>
