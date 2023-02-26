@@ -3,7 +3,7 @@
   </head>
   <body>
     <script>
-      const apikey = process.env.API_KEY;
+      const apikey = ${{ secrets.API_KEY }};
       document.getElementById("one").innerHTML = apikey;
     </script>
     <p id="one"></p>
