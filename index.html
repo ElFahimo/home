@@ -30,11 +30,48 @@
 <a href="query.html" style="right: 800px;position: absolute;bottom: 300px;">Check Live Crypto Prices</a>
 </div>
 <div>
-<img src="realeye.png" class="eye" id="rick-right-eye" name="helo" style="top: 215px; right: 810px;">
-<img src="realeye.png" class="eye" id="rick-left-eye" style="top: 216px; right: 875px;">
-<img src="realeye.png" class="eye" id="morty-right-eye" style="top: 360px; right: 970px;">
-<img src="realeye.png" class="eye" id="morty-left-eye" style="top: 370px; right: 1040px;"> 
+<img src="realeye.png" class="eye1" id="rick-right-eye" name="helo" style="top: 215px; right: 810px;">
+<img src="realeye.png" class="eye2" id="rick-left-eye" style="top: 216px; right: 875px;">
+<img src="realeye.png" class="eye3" id="morty-right-eye" style="top: 360px; right: 970px;">
+<img src="realeye.png" class="eye4" id="morty-left-eye" style="top: 370px; right: 1040px;"> 
 </div>
+<style>
+    @media screen and (max-width: 768px) {
+        .eye4 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 370px;
+            right: 484px;
+        }
+        .eye1{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 215px;
+            right: 259px;
+        }
+        .eye2{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 216px;
+            right: 315px;
+        }
+        .eye3{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 360px;
+            right: 416px;
+        }
+        .hello{
+            right: 213px;
+            position: absolute;
+            bottom: 157px;
+        }
+    }
+</style>
 <script>
   document.addEventListener('mousemove',(e)=> {
     // For Rick's eyes
