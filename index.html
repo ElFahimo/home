@@ -35,43 +35,86 @@
 <img src="realeye.png" class="eye3" id="morty-right-eye" style="top: 360px; right: 970px;">
 <img src="realeye.png" class="eye4" id="morty-left-eye" style="top: 370px; right: 1040px;"> 
 </div>
-<style>
-    @media screen and (max-width: 768px) {
-        .eye4 {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 370px;
-            right: 484px;
-        }
-        .eye1{
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 215px;
-            right: 259px;
-        }
-        .eye2{
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 216px;
-            right: 315px;
-        }
-        .eye3{
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 360px;
-            right: 416px;
-        }
-        .hello{
-            right: 213px;
-            position: absolute;
-            bottom: 157px;
-        }
-    }
-</style>
+<script>
+
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+console.log(`Screen width: ${screenWidth}px, Screen height: ${screenHeight}px`);
+// Define a function to apply the styles when the media query matches
+function applyStyles() {
+  // Set the styles for the eye and hello elements
+  document.getElementById('rick-right-eye').style.width = '30px';
+  document.getElementById('rick-right-eye').style.height = '30px';
+  document.getElementById('rick-right-eye').style.position = 'absolute';
+  document.getElementById('rick-right-eye').style.top = '272px';
+  document.getElementById('rick-right-eye').style.right = '395px';
+
+  document.getElementById('rick-left-eye').style.width = '30px';
+  document.getElementById('rick-left-eye').style.height = '30px';
+  document.getElementById('rick-left-eye').style.position = 'absolute';
+  document.getElementById('rick-left-eye').style.top = '276px';
+  document.getElementById('rick-left-eye').style.right = '456px';
+
+  document.getElementById('morty-right-eye').style.width = '30px';
+  document.getElementById('morty-right-eye').style.height = '30px';
+  document.getElementById('morty-right-eye').style.position = 'absolute';
+  document.getElementById('morty-right-eye').style.top = '420px';
+  document.getElementById('morty-right-eye').style.right = '551px';
+
+  document.getElementById('morty-left-eye').style.width = '30px'; 
+  document.getElementById('morty-left-eye').style.height = '30px' ;
+  document.getElementById('morty-left-eye').style.position = ' absolute';
+  document.getElementById('morty-left-eye').style.top = '430px';
+  document.getElementById('morty-left-eye').style.right = '620px';
+
+  document.getElementById('main').style.right = '213px';
+  document.getElementById('main').style.position = 'absolute';
+  document.getElementById('main').style.bottom = '157px';
+}
+
+function applyStyles1() {
+  // Set the styles for the eye and hello elements
+  document.getElementById('rick-right-eye').style.width = '30px';
+  document.getElementById('rick-right-eye').style.height = '30px';
+  document.getElementById('rick-right-eye').style.position = 'absolute';
+  document.getElementById('rick-right-eye').style.top = '215px';
+  document.getElementById('rick-right-eye').style.right = '810px';
+
+  document.getElementById('rick-left-eye').style.width = '30px';
+  document.getElementById('rick-left-eye').style.height = '30px';
+  document.getElementById('rick-left-eye').style.position = 'absolute';
+  document.getElementById('rick-left-eye').style.top = '216px';
+  document.getElementById('rick-left-eye').style.right = '875px';
+
+  document.getElementById('morty-right-eye').style.width = '30px';
+  document.getElementById('morty-right-eye').style.height = '30px';
+  document.getElementById('morty-right-eye').style.position = 'absolute';
+  document.getElementById('morty-right-eye').style.top = '360px';
+  document.getElementById('morty-right-eye').style.right = '970px';
+
+  document.getElementById('morty-left-eye').style.width = '30px'; 
+  document.getElementById('morty-left-eye').style.height = '30px' ;
+  document.getElementById('morty-left-eye').style.position = ' absolute';
+  document.getElementById('morty-left-eye').style.top = '370px';
+  document.getElementById('morty-left-eye').style.right = '1040px';
+
+  document.getElementById('main').style.left = '640px';
+  document.getElementById('main').style.position = 'absolute';
+  document.getElementById('main').style.top = '50px';
+}
+
+// Apply the styles when the page loads
+
+// Apply the styles when the media query matches
+
+
+if (window.innerHeight <= 768) {
+  applyStyles()
+} else {
+  applyStyles1()
+}
+
+</script>
 <script>
   document.addEventListener('mousemove',(e)=> {
     // For Rick's eyes
